@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="willbl-site-logo1.png">
+    <title>Will Burrard-Lucas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/brands.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parkinsans:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tulpen+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: transparent;
+            font-family: "Jost", serif;
+            padding: 6px 30px;
+            background-color: black;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1222;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .logo img {
+            width: 250px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            transition: 0.5s ease-in;
+            padding: 5px 12px;
+            font-weight: 500;
+            border-radius: 50px;
+        }
+
+        .nav-links li a:hover {
+            color: rgb(53, 53, 53);
+            background-color: rgb(255, 251, 251);
+        }
+
+        .nav-links li {
+            list-style: none;
+            font-size: 18px;
+        }
+
+        .nav-links ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .header {
+            display: grid;
+            grid-gap: 22px 0;
+            font-family: "Jost", serif;
+            margin-left: 6%;
+            grid-row: 2/3;
+        }
+
+        .animal {
+            background-image: url("hero-1920.jpg");
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 20vh auto 20vh;
+            align-items: center;
+        }
+
+        .photo h1 {
+            font-size: 90px;
+            line-height: 80px;
+        }
+
+        .graph p {
+            font-size: 18px;
+        }
+
+        .button {
+            height: 40px;
+            width: 150px;
+            background-color: rgb(49, 48, 48);
+            text-align: center;
+        }
+
+        .button a {
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 40px;
+            color: white;
+        }
+
+        .content {
+            padding-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto 50vh auto;
+            grid-template-areas:
+                "head head head"
+                "para para para"
+                "im1 im2 im3"
+                "paras paras paras";
+            width: 90%;
+            margin: auto;
+            grid-gap: 30px 40px;
+            justify-content: center;
+            color: black;
+            font-family: "Jost", serif;
+        }
+
+        .img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .h1 {
+            grid-area: head;
+            align-self: center;
+            justify-self: center;
+            text-align: center;
+        }
+
+        .h1 h1 {
+            font-size: 36px;
+            font-family: "Tulpen One", sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .h1 h2 {
+            font-size: 36px;
+            font-family: "Ubuntu", sans-serif;
+        }
+
+        .p {
+            grid-area: para;
+            align-self: center;
+            justify-self: center;
+            font-size: 20px;
+        }
+
+        .img1 {
+            grid-area: im1;
+        }
+
+        .img2 {
+            grid-area: im2;
+        }
+
+        .img3 {
+            grid-area: im3;
+        }
+
+        .p1 {
+            grid-area: paras;
+            overflow: hidden;
+        }
+
+        .p1 p {
+            font-size: 17px;
+            line-height: 30px;
+            font-family: "Nunito", serif;
+        }
+
+        .img1 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .img2 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .img3 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .together {
+            position: relative;
+            overflow: hidden;
+            height: 50vh;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            background-color: white;
+        }
+
+        .image-container1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* clip-path: polygon(0 0, 100% 0, 0 100%, 0 100%); */
+            clip-path: polygon(0 0, 120% 0, 0 150%, 0 100%);
+            transition: clip-path 0.6s ease-in-out;
+        }
+
+        .image-container1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease, filter 0.6s ease;
+        }
+
+        .together:hover .image-container1 {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .together:hover .image-container1 img {
+            transform: scale(1.1);
+            filter: brightness(80%);
+        }
+
+        .think {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            transform: translateX(20px);
+            padding: 5px;
+        }
+
+        .together:hover .think {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .think h3 {
+            font-size: 1.7rem;
+            font-family: "Ubuntu", sans-serif;
+        }
+
+        .think p {
+            font-size: 1rem;
+            margin-top: 10px;
+            color: #d4d4d4;
+        }
+
+        .whole {
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .whole h1 {
+            font-family: "Ubuntu", sans-serif;
+        }
+
+        .whole h2 {
+            font-family: "Merriweather", serif;
+        }
+
+        .heads h1 {
+            font-size: 50px;
+            font-family: "Ubuntu", sans-serif;
+        }
+
+        .gallery {
+            width: 95%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(7, 50vh);
+            grid-gap: 10px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card1 {
+            grid-row: 1/3;
+        }
+
+        .gallery img {
+            animation: appear 3s linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+            overflow: hidden;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                clip-path: inset(100% 100% 0 0);
+            }
+
+            to {
+                opacity: 1;
+                clip-path: inset(0 0 0 0);
+            }
+        }
+
+
+        .card3 {
+            grid-row: 1/3;
+            grid-column: 3/4;
+        }
+
+        .card12 {
+            grid-row: 4/6;
+            grid-column: 2/4;
+        }
+
+        .card10 {
+            grid-row: 4/6;
+        }
+
+        .card14 {
+            grid-row: 6/8;
+            grid-column: 2/3;
+        }
+
+        .month {
+            padding-top: 50px;
+            width: 95%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto 50vh auto;
+            gap: 10px 30px;
+            font-size: 13px;
+        }
+
+        .award1 {
+            grid-column: 1/4;
+            justify-self: center;
+            font-size: 35px;
+            font-family: "Ubuntu", sans-serif;
+
+        }
+
+        .award2 {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .award3 {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .award4 {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .award2 img {
+            height: 85%;
+        }
+
+        .award3 img {
+            height: 85%;
+        }
+
+        .award4 img {
+            height: 85%;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s ease-in-out;
+            display: flex;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.8s ease-in-out;
+        }
+
+        .image-container::before,
+        .image-container::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 2;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .image-container::before {
+            left: 0;
+            transform: translateX(-100%);
+        }
+
+        .image-container::after {
+            right: 0;
+            transform: translateX(100%);
+        }
+
+        .wild:hover .image-container {
+            transform: scale(1.1);
+        }
+
+        .wild:hover .image-container img {
+            filter: grayscale(50%) contrast(1.2);
+        }
+
+        .wild:hover .image-container::before {
+            transform: translateX(0);
+        }
+
+        .wild:hover .image-container::after {
+            transform: translateX(0);
+        }
+
+        .details {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .details h2 {
+            font-family: "Merriweather", serif;
+        }
+
+        .wild:hover .details {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .details h2 {
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin: 0;
+            color: white;
+        }
+
+        .details p {
+            font-size: 1rem;
+            margin-top: 10px;
+            font-family: "Jost", serif;
+            color: #d6d4d4;
+        }
+
+        .about {
+            display: grid;
+            width: 95%;
+            margin: auto;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: auto repeat(5, 20vh);
+            grid-gap: 15px 10px;
+            /* font-family: "Merriweather", serif;  */
+            overflow: hidden;
+        }
+
+        .about p {
+            font-family: "Merriweather", serif;
+            line-height: 25px;
+        }
+
+        .us1 {
+            grid-column: 1/6;
+            font-size: 35px;
+        }
+
+        .us2 {
+            grid-column: 1/4;
+            grid-row: 2/5;
+        }
+
+        .us3 {
+            grid-column: 1/4;
+            grid-row: 5/7;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .us3 h2 {
+            font-size: 30px;
+        }
+
+        .us3 p {
+            font-size: 14px;
+            line-height: 26px;
+        }
+
+        .us4 {
+            grid-row: 2/6;
+            background-image: url("deers.jpg");
+            background-size: cover;
+            background-position: bottom;
+            background-attachment: fixed;
+        }
+
+        .us5 {
+            grid-row: 3/ 7;
+            background-image: url("deers.jpg");
+            background-size: cover;
+            background-position: bottom;
+            background-attachment: fixed;
+        }
+
+        .us6 {
+            grid-row: 2/6;
+            background-image: url("deers.jpg");
+            background-size: cover;
+            background-position: bottom;
+            background-attachment: fixed;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 95%;
+            margin: auto;
+        }
+
+        .art {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: "Jost", serif;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .art img {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 2s ease;
+        }
+
+        .art img:hover {
+            filter: grayscale(0%);
+        }
+
+        .art h2 {
+            font-size: 1.3em;
+            color: #333;
+            line-height: 34px;
+        }
+
+        .art p {
+            font-size: 1em;
+            color: #555;
+            line-height: 25px;
+            font-family: "Nunito", serif;
+        }
+
+        footer {
+            background-color: black;
+        }
+
+        .footer {
+            margin-top: 50px;
+            background-image: url("black-panther.jpg");
+            width: 100%;
+            height: 500px;
+            background-position: bottom;
+            background-size: cover;
+            font-family: "Jost", serif;
+        }
+
+        .fun {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 100px);
+            /* grid-gap: 0px; */
+            grid-gap: 0 70px;
+            width: 90%;
+            margin: auto;
+            color: white;
+        }
+
+        .footer h2 {
+            font-family: "Ubuntu", sans-serif;
+            color: #aba8a8;
+        }
+
+        .footer p {
+            color: #ddd;
+        }
+
+        .foot1 ul li {
+            list-style: none;
+        }
+
+        .foot1 {
+            grid-row: 2/5;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .foot2 {
+            grid-row: 2/5;
+            grid-column: 2/3;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .foot3 {
+            grid-row: 2 / 5;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .foot3 ul li {
+            line-height: 30px;
+        }
+
+        .grow {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .up {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .icon {
+            display: flex;
+            width: 90%;
+            margin: auto;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+            color: #b3b3b3;
+            font-family: "Nunito", serif;
+        }
+
+        .right {
+            display: flex;
+            gap: 25px;
+        }
+
+        .right i {
+            font-size: 30px;
+        }
+
+        .form {
+            display: flex;
+        }
+
+        .control {
+            display: block;
+            width: 70%;
+            padding: 10px 10px;
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: white;
+            background-color: #ffffff30;
+            background-clip: padding-box;
+            border: 1px solid #676767;
+            appearance: none;
+            border-top-left-radius: .375rem;
+            border-bottom-left-radius: .375rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            outline: none;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            border: 0;
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            font-size: 1rem;
+            line-height: 1rem;
+            justify-content: center;
+            padding: .1rem 1rem;
+            color: #141414;
+            border: 2px solid rgba(0, 0, 0, 0);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            --box-shadow-color: #ECEFF1;
+            background-color: #FAFAFA;
+        }
+
+        .control::placeholder {
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="willbl-site-logo.png">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#award">Awards</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="animal">
+            <div class="header">
+                <div class="photo">
+                    <h1>Will Burrard</h1>
+                    <h1>Lucas</h1>
+                </div>
+                <div class="graph">
+                    <p>I’m a UK based photographer that enjoys capturing the natural world. Have a look at my photo
+                        galleries, workshops, and holidays.</p>
+                </div>
+                <div class="button">
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="content">
+            <div class="h1 head">
+                <h1>Photography</h1>
+                <h2>Will Burrard-Lucas</h2>
+            </div>
+            <div class="p para">
+                <p>“Luck is when opportunity meets preparedness” – Seneca</p>
+            </div>
+            <div class="img1 im1 together">
+                <div class="image-container1">
+                    <img src="cheetah.jpg" alt="">
+                </div>
+                <div class="think">
+                    <h3>Whispers of the Wilderness</h3>
+                    <p>Discover the untamed beauty of nature and its awe-inspiring creatures in their natural habitats.
+                    </p>
+                </div>
+            </div>
+            <div class="img2 im2 together">
+                <div class="image-container1">
+                    <img src="wolves.jpg" alt="">
+                </div>
+                <div class="think">
+                    <h3>The Call of the Untamed</h3>
+                    <p>Experience the thrilling adventure of the wild, where every roar, chirp, and rustle reveals the
+                        wonders of nature.</p>
+                </div>
+            </div>
+            <div class="img3 im3 together">
+                <div class="image-container1">
+                    <img src="bird.jpg" alt="">
+                </div>
+                <div class="think">
+                    <h3>The Symphony of the Skies</h3>
+                    <p>Discover the vibrant world of birds, where every flap of wings tells a story of elegance and
+                        survival.</p>
+                </div>
+            </div>
+            <div class="p1 paras">
+                <p>I’m Will Burrard-Lucas, a wildlife photographer from the UK. I aim to use technology and innovation
+                    to photograph wildlife in new ways.When I was young, my family spent several years living in
+                    Tanzania. My earliest memories are of being on safari and from those seeds grew a lifelong
+                    fascination with the natural world and a connection with the continent of Africa which continues to
+                    draw me back today. In 2012, my wife and I moved to Zambia for a year, and since 2017 I have
+                    predominately focused on projects in Kenya.
+                </p>
+                <p>In 2017, I started a project to document the last of Africa’s iconic elephants with tusks reaching
+                    down to the ground, in collaboration with the Tsavo Trust and Kenya Wildlife Service. In 2019, this
+                    culminated in a coffee table book, “Land of Giants”.</p>
+
+                <p>In 2019, I used my Camtraptions system to capture rare high-quality camera trap images of a
+                    melanistic leopard in Africa. My new book, “The Black Leopard”, was released in March 2021.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="whole" id="gallery">
+            <div class="heads">
+                <h1>Gallery</h1>
+            </div>
+            <div class="gallery">
+                <div class="card1">
+                    <img src="cub.jpg" alt="">
+                </div>
+                <div class="card2">
+                    <img src="penguin.jpg" alt="">
+                </div>
+                <div class="card3">
+                    <img src="giraffee.jpg" alt="">
+                </div>
+                <div class="card4">
+                    <img src="zebra.jpg" alt="">
+                </div>
+                <div class="card5">
+                    <img src="elephant.jpg" alt="">
+                </div>
+                <div class="card6">
+                    <img src="lioness.jpg" alt="">
+                </div>
+                <div class="card7">
+                    <img src="cheetah-cub.jpeg" alt="">
+                </div>
+                <div class="card8">
+                    <img src="tiger.jpeg" alt="">
+                </div>
+                <div class="card9">
+                    <img src="lions.jpeg" alt="">
+                </div>
+                <div class="card10">
+                    <img src="cub-peek.jpeg" alt="">
+                </div>
+                <div class="card11">
+                    <img src="leopard-butterfly.jpeg" alt="">
+                </div>
+                <div class="card12">
+                    <img src="birds.jpg" alt="">
+                </div>
+                <div class="card13">
+                    <img src="deer-7508187_1920.jpg" alt="">
+                </div>
+                <div class="card14">
+                    <img src="leopards.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="month" id="award">
+            <div class="award1">
+                <h1>Awards</h1>
+            </div>
+            <div class="award2 wild">
+                <div class="image-container">
+                    <img src="lion&lion.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h2>British Wildlife Photography Awards</h2>
+                    <p>Won the British Wildlife Photography Awards for an extraordinary capture of two majestic lions in
+                        their natural habitat.</p>
+                </div>
+            </div>
+            <div class="award3 wild">
+                <div class="image-container">
+                    <img src="lionn.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h2>GDT-European Wildlife Photographer of the Year</h2>
+                    <p>Awarded the GDT-European Wildlife Photographer of the Year for a stunning capture of a lion
+                        basking in the sunlight.</p>
+                </div>
+            </div>
+            <div class="award4 wild">
+                <div class="image-container">
+                    <img src="black-leopard.jpg" alt="">
+                </div>
+                <div class="details">
+                    <h2>Wildlife photographer of the Year</h2>
+                    <p>Won the Wildlife Photographer of the Year award for an extraordinary photograph of a black
+                        leopard in its natural habitat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="whole" id="about">
+            <div class="us1">
+                <h1>About</h1>
+            </div>
+            <div class="about">
+                <div class="us2">
+                    <img src="photographer.jpg" alt="">
+                </div>
+                <div class="us3">
+                    <h2>I'm Will Burrard-Lucas </h2>
+                    <p>I endeavour to capture intimate portraits of animals that convey a sense of awe and wonder. To
+                        achieve this, I often prefer to get close and use a wide-angle lens. In the early days, I would
+                        crawl up to animals whenever possible, but there were limited subjects were this approach was
+                        feasible. I therefore built “BeetleCam”, a remote control camera buggy, which I use to capture
+                        close-up, ground-level photographs of potentially dangerous African wildlife. I have also
+                        developed an ecosystem of camera trap equipment, which I use to photograph shy and nocturnal
+                        wildlife.</p>
+                    <p>When I first published my BeetleCam photographs, other photographers and filmmakers asked me to
+                        build similar devices for them. This led me to establish Camtraptions Ltd in 2013, through which
+                        I produce a range of products for remote and camera trap photography. Camtraptions equipment has
+                        since been used to take photographs which have won awards in numerous prestigious international
+                        photography competitions and to capture video footage for many high-profile natural history
+                        television programmes of recent years.</p>
+                </div>
+                <div class="us4">
+                </div>
+                <div class="us5">
+                </div>
+                <div class="us6">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="whole" id="blog">
+            <div class="heads">
+                <h1>Blogs</h1>
+            </div>
+            <div class="grid-container">
+                <!-- Article 1 -->
+                <article class="art">
+                    <img src="lion-water.jpg" alt="">
+                    <h2>We Built a Waterhole</h2>
+                    <span>Oct 24, 2022 | Camera Traps | 15 comments</span>
+                    <p>In the relentless heat of the day, Shompole Conservancy seems like an inhospitable place. A layer
+                        of fine dust blankets everything and it is impossible to move without sending puffs of it
+                        drifting off on the breeze. It is very dry and it might appear that little wildlife could
+                        survive here.</p>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="art">
+                    <img src="leopart-star.jpg" alt="">
+                    <h2>Starlit Black Leopard: Capturing my dream photograph</h2>
+                    <span>Mar 2, 2021 | Camera Traps | 24 comments</span>
+                    <p>In early 2019, I released my first images of a black leopard in Kenya. However, the project did
+                        not end there. For a period of time, I knew where I could find an African black leopard and I
+                        was keen to make the most of this once-in-a-lifetime opportunity.</p>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="art">
+                    <img src="hyena.jpg" alt="">
+                    <h2>BeetleCam turns 10!</h2>
+                    <span>Jul 8, 2019 | BeetleCam | 1 comment</span>
+                    <p>This month it is ten years since I finished building the first BeetleCam. At the time, I had no
+                        idea how much BeetleCam would go on to shape my career. BeetleCam started me down a path which
+                        led me to develop a whole host of devices, many of which have been instrumental in my
+                        photography projects over the past 10 years.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div class="fun">
+                    <div class="foot1">
+                        <div class="grow">
+                            <h2>Will Burrard-Lucas Photography</h2>
+                            <ul>
+                                <li><a href=""></a>About</li>
+                                <li><a href=""></a>Gallery</li>
+                                <li><a href=""></a>Awards</li>
+                                <li><a href=""></a>Blog</li>
+                            </ul>
+                        </div>
+                        <div class="up">
+                            <h2>Photo Usage</h2>
+                            <span>For print and commercial uses, please request a quote.For online editorial and
+                                personal use, you may use images from this website</span>
+                        </div>
+                    </div>
+                    <div class="foot2">
+                        <div class="grow">
+                            <h2>About Me</h2>
+                            <p>I am a wildlife photographer predominantly focusing on projects in Africa. I am also the
+                                founder of Camtraptions and WildlifePhoto.com.</p>
+                        </div>
+                        <div class="up">
+                            <h2>Contact Me</h2>
+                            <form>
+                                <div class="form">
+                                    <input type="email" name="myEmail" placeholder="Your Email" class="control"
+                                        required="">
+                                    <button type="submit" class="btn"><i class="fa-solid fa-arrow-right"
+                                            style="color: #000000;"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="foot3">
+                        <h2>Latest Posts</h2>
+                        <ul>
+                            <li>Race to Save Kenya’s Giant Pangolins</li>
+                            <li>We Built a Waterhole</li>
+                            <li>TEDx Talk: What I learned while photographing wildlife</li>
+                            <li>Melanistic Serval Kitten in the Serengeti</li>
+                            <li>Starlit Black Leopard: Capturing my dream photograph</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="icon">
+                <div class="copy">
+                    <span>Copyright © 2004-2024 Will Burrard-Lucas</span>
+                </div>
+                <div class="right">
+                    <i class="fa-brands fa-facebook-f" style="color: #666666;"></i>
+                    <i class="fa-brands fa-instagram" style="color: #666666;"></i>
+                    <i class="fa-brands fa-x-twitter" style="color: #666666;"></i>
+                    <i class="fa-solid fa-rss" style="color: #666666;"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
