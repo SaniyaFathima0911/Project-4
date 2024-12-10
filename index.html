@@ -20,7 +20,13 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        /* body{
+            background-image: url("top-view-vintage-camera-compass-binoculars.jpg");
+            background-position: top;
+            background-size: cover;
+            background-attachment: fixed;
+        } */
+       
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -266,7 +272,7 @@
 
         .think h3 {
             font-size: 1.7rem;
-            font-family: "Ubuntu", sans-serif;
+            font-family: "Nunito", serif;
         }
 
         .think p {
@@ -714,7 +720,7 @@
             display: block;
             width: 70%;
             padding: 10px 10px;
-            font-size: 1.25rem;
+            font-size: 17px;
             font-weight: 400;
             line-height: 1.5;
             color: white;
@@ -753,6 +759,57 @@
         .control::placeholder {
             color: white;
             font-size: 14px;
+        }
+
+        @media (min-width:992px) and (max-width:1200px) {
+            .navbar {
+                padding: 6px 15px;
+            }
+
+            .logo {
+                height: 40px;
+            }
+
+            .logo img {
+                width: 200px;
+            }
+
+            .nav-links ul {
+                gap: 30px;
+            }
+
+            .header {
+                grid-gap: 18px 0;
+            }
+
+            .photo h1 {
+                font-size: 70px;
+                line-height: 70px;
+            }
+
+            .graph p {
+                font-size: 17px;
+            }
+
+            .think h3 {
+                font-size: 26px;
+            }
+
+            .month {
+                grid-template-rows: auto 60vh 60vh 60vh;
+            }
+
+            .award2 {
+                grid-column: 1 / 4;
+            }
+
+            .award3 {
+                grid-column: 1 / 4;
+            }
+
+            .award4 {
+                grid-column: 1 / 4;
+            }
         }
     </style>
 </head>
@@ -855,48 +912,48 @@
                 <h1>Gallery</h1>
             </div>
             <div class="gallery">
-                <div class="card1">
+                <figure class="card1">
                     <img src="cub.jpg" alt="">
-                </div>
-                <div class="card2">
+                </figure>
+                <figure class="card2">
                     <img src="penguin.jpg" alt="">
-                </div>
-                <div class="card3">
+                </figure>
+                <figure class="card3">
                     <img src="giraffee.jpg" alt="">
-                </div>
-                <div class="card4">
+                </figure>
+                <figure class="card4">
                     <img src="zebra.jpg" alt="">
-                </div>
-                <div class="card5">
+                </figure>
+                <figure class="card5">
                     <img src="elephant.jpg" alt="">
-                </div>
-                <div class="card6">
+                </figure>
+                <figure class="card6">
                     <img src="lioness.jpg" alt="">
-                </div>
-                <div class="card7">
+                </figure>
+                <figure class="card7">
                     <img src="cheetah-cub.jpeg" alt="">
-                </div>
-                <div class="card8">
+                </figure>
+                <figure class="card8">
                     <img src="tiger.jpeg" alt="">
-                </div>
-                <div class="card9">
+                </figure>
+                <figure class="card9">
                     <img src="lions.jpeg" alt="">
-                </div>
-                <div class="card10">
+                </figure>
+                <figure class="card10">
                     <img src="cub-peek.jpeg" alt="">
-                </div>
-                <div class="card11">
+                </figure>
+                <figure class="card11">
                     <img src="leopard-butterfly.jpeg" alt="">
-                </div>
-                <div class="card12">
+                </figure>
+                <figure class="card12">
                     <img src="birds.jpg" alt="">
-                </div>
-                <div class="card13">
+                </figure>
+                <figure class="card13">
                     <img src="deer-7508187_1920.jpg" alt="">
-                </div>
-                <div class="card14">
+                </figure>
+                <figure class="card14">
                     <img src="leopards.jpg" alt="">
-                </div>
+                </figure>
             </div>
         </div>
     </section>
