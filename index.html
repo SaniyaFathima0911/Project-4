@@ -20,13 +20,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        /* body{
-            background-image: url("top-view-vintage-camera-compass-binoculars.jpg");
-            background-position: top;
-            background-size: cover;
-            background-attachment: fixed;
-        } */
-       
+
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -236,6 +230,7 @@
         .image-container1 img {
             width: 100%;
             height: 100%;
+            object-position: top;
             object-fit: cover;
             transition: transform 0.6s ease, filter 0.6s ease;
         }
@@ -761,6 +756,54 @@
             font-size: 14px;
         }
 
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                top: 48px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 60px);
+                background-color: #fff;
+                flex-direction: column;
+                align-items: center;
+                transition: left 0.3s ease-in-out;
+            }
+
+            .nav-links ul {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .nav-links li a {
+                text-decoration: none;
+                color: black;
+                transition: color 0.3s;
+            }
+
+            .nav-links li {
+                margin: 20px 0;
+            }
+
+            .menu-icon {
+                display: block;
+                color: white;
+            }
+
+            .menu-toggle:checked+.menu-icon+.nav-links {
+                left: 0;
+            }
+        }
+
         @media (min-width:992px) and (max-width:1200px) {
             .navbar {
                 padding: 6px 15px;
@@ -779,12 +822,16 @@
             }
 
             .header {
-                grid-gap: 18px 0;
+                grid-gap: 10px 0;
+            }
+
+            .animal {
+                height: 80vh;
             }
 
             .photo h1 {
-                font-size: 70px;
-                line-height: 70px;
+                font-size: 65px;
+                line-height: 65px;
             }
 
             .graph p {
@@ -796,7 +843,28 @@
             }
 
             .month {
-                grid-template-rows: auto 60vh 60vh 60vh;
+                grid-template-rows: auto 450px 450px 450px;
+            }
+
+            .content {
+                grid-template-rows: auto auto 350px auto;
+            }
+
+            .together {
+                height: 350px;
+            }
+
+            .about {
+                grid-template-rows: auto repeat(5, 150px);
+                grid-gap: 15px 4px;
+            }
+
+            .details h2 {
+                font-size: 28px;
+            }
+
+            .details p {
+                font-size: 20px;
             }
 
             .award2 {
@@ -810,6 +878,584 @@
             .award4 {
                 grid-column: 1 / 4;
             }
+
+            .grid-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .art img {
+                height: 400px;
+            }
+
+            .gallery {
+                grid-template-rows: repeat(7, 250px);
+            }
+
+            .footer {
+                height: 550px;
+            }
+        }
+
+        @media (min-width:768px) and (max-width:992px) {
+            .navbar {
+                padding: 6px 15px;
+            }
+
+            .logo {
+                height: 40px;
+            }
+
+            .logo img {
+                width: 200px;
+            }
+
+            .nav-links ul {
+                gap: 30px;
+            }
+
+            .nav-links li a {
+                font-size: 16px;
+            }
+
+            .header {
+                grid-gap: 10px 0;
+            }
+
+            .content {
+                grid-template-rows: auto auto 350px 350px 350px auto;
+                grid-template-areas:
+                    "head head head"
+                    "para para para"
+                    "im1 im1 im1"
+                    "im2 im2 im2"
+                    "im3 im3 im3"
+                    "paras paras paras";
+            }
+
+            .together {
+                height: 350px;
+            }
+
+            .animal {
+                height: 70vh;
+            }
+
+            .photo h1 {
+                font-size: 60px;
+                line-height: 60px;
+            }
+
+            .graph p {
+                font-size: 16px;
+            }
+
+            #remove {
+                display: none;
+            }
+
+            .gallery {
+                grid-template-rows: repeat(7, 200px);
+            }
+
+            .month {
+                grid-template-rows: auto 350px 350px 350px;
+            }
+
+            .award2 {
+                grid-column: 1 / 4;
+            }
+
+            .award3 {
+                grid-column: 1 / 4;
+            }
+
+            .award4 {
+                grid-column: 1 / 4;
+            }
+
+            .us3 h2 {
+                font-size: 25px;
+            }
+
+            .us3 p {
+                font-size: 12px;
+                line-height: 20px;
+            }
+
+            .about {
+                grid-template-rows: auto repeat(5, 150px);
+                grid-gap: 15px 4px;
+            }
+
+            .us2 {
+                grid-column: 1 / 5;
+            }
+
+            .us3 {
+                grid-column: 1 / 5;
+            }
+
+            .us4 {
+                display: none;
+            }
+
+            .us5 {
+                grid-row: 3 / 7;
+            }
+
+            .us6 {
+                grid-row: 2 / 6;
+            }
+
+            .grid-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .art img {
+                height: 350px;
+            }
+
+            .icon {
+                height: 58px;
+            }
+
+            .footer {
+                height: 560px;
+            }
+
+            .fun {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(5, 100px);
+                grid-gap: 0 40px;
+            }
+        }
+
+        @media (min-width:576px) and (max-width:768px) {
+            .logo {
+                height: 40px;
+            }
+
+            .logo img {
+                width: 200px;
+            }
+
+            .header {
+                grid-gap: 10px 0;
+            }
+
+            .navbar {
+                padding: 6px 10px;
+            }
+
+            .content {
+                grid-template-rows: auto auto 350px 350px 350px auto;
+                grid-template-areas:
+                    "head head head"
+                    "para para para"
+                    "im1 im1 im1"
+                    "im2 im2 im2"
+                    "im3 im3 im3"
+                    "paras paras paras";
+            }
+
+            .together {
+                height: 350px;
+            }
+
+            .animal {
+                height: 70vh;
+            }
+
+            .photo h1 {
+                font-size: 35px;
+                line-height: 35px;
+            }
+
+            .graph p {
+                font-size: 13px;
+            }
+
+            .button {
+                width: 120px;
+                height: 35px;
+            }
+
+            .button a {
+                font-size: 16px;
+                line-height: 35px;
+            }
+
+            #remove {
+                display: none;
+            }
+
+            .gallery {
+                grid-template-rows: repeat(7, 250px);
+            }
+
+            .month {
+                grid-template-rows: auto 350px 350px 350px;
+            }
+
+            .award2 {
+                grid-column: 1 / 4;
+            }
+
+            .award3 {
+                grid-column: 1 / 4;
+            }
+
+            .award4 {
+                grid-column: 1 / 4;
+            }
+
+            .us3 h2 {
+                font-size: 25px;
+            }
+
+            .us3 p {
+                font-size: 12px;
+                line-height: 20px;
+            }
+
+            .about {
+                grid-template-rows: auto repeat(5, 150px);
+                grid-gap: 15px 4px;
+            }
+
+            .us2 {
+                grid-column: 1 / 5;
+            }
+
+            .us3 {
+                grid-column: 1 / 5;
+            }
+
+            .us4 {
+                display: none;
+            }
+
+            .us5 {
+                grid-row: 3 / 7;
+            }
+
+            .us6 {
+                grid-row: 2 / 6;
+            }
+
+            .grid-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .art img {
+                height: 350px;
+            }
+
+            .icon {
+                height: 58px;
+            }
+
+            .footer {
+                height: 560px;
+            }
+
+            .footer h2 {
+                font-size: 20px;
+            }
+
+            .foot1 ul li {
+                font-size: 14px;
+            }
+
+            .footer p {
+                font-size: 14px;
+            }
+
+            .up {
+                font-size: 14px;
+            }
+
+            .grow {
+                gap: 12px;
+            }
+
+            .control {
+                padding: 6px 6px;
+                font-size: 15px;
+            }
+
+            .btn {
+                padding: 10px 10px;
+            }
+
+            .foot3 ul li {
+                line-height: 30px;
+                font-size: 14px;
+            }
+
+            .right i {
+                font-size: 25px;
+            }
+
+            .fun {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(5, 100px);
+                grid-gap: 0 40px;
+            }
+        }
+
+        @media (min-width:300px) and (max-width:576px) {
+            .logo {
+                height: 30px;
+            }
+
+            .logo img {
+                width: 150px;
+            }
+
+            .header {
+                grid-gap: 10px 0;
+            }
+
+            .navbar {
+                padding: 6px 10px;
+            }
+
+            .content {
+                grid-template-rows: auto auto 350px 350px 350px auto;
+                grid-template-areas:
+                    "head head head"
+                    "para para para"
+                    "im1 im1 im1"
+                    "im2 im2 im2"
+                    "im3 im3 im3"
+                    "paras paras paras";
+                grid-gap: 15px 40px;
+            }
+
+            .together {
+                height: 350px;
+            }
+
+            .animal {
+                height: 60vh;
+            }
+
+            .photo h1 {
+                font-size: 22px;
+                line-height: 22px;
+            }
+
+            .graph p {
+                font-size: 11px;
+            }
+
+            .button {
+                width: 100px;
+                height: 30px;
+            }
+
+            .button a {
+                font-size: 12px;
+                line-height: 30px;
+            }
+
+            #remove {
+                display: none;
+            }
+
+            .heads h1 {
+                font-size: 35px;
+            }
+
+            .h1 h2 {
+                font-size: 25px;
+                font-family: "Ubuntu", sans-serif;
+            }
+
+            .p p {
+                font-size: 14px;
+                text-align: center;
+            }
+
+            .p1 p {
+                font-size: 14px;
+                line-height: 26px;
+                font-family: "Nunito", serif;
+            }
+
+            .gallery {
+                grid-template-rows: repeat(7, 120px);
+                grid-gap: 4px;
+            }
+
+            .month {
+                grid-template-rows: auto 250px 250px 250px;
+            }
+
+            .award1 h1 {
+                font-size: 25px;
+            }
+
+            .award2 {
+                grid-column: 1 / 4;
+            }
+
+            .award3 {
+                grid-column: 1 / 4;
+            }
+
+            .award4 {
+                grid-column: 1 / 4;
+            }
+
+            .details h2 {
+                font-size: 16px;
+            }
+
+            .details p {
+                font-size: 14px;
+            }
+
+            .whole {
+                padding-top: 35px;
+                gap: 10px;
+            }
+
+            .whole h1 {
+                font-size: 30px;
+            }
+
+            .us1 {
+                font-size: 25px;
+            }
+
+            .us3 h2 {
+                font-size: 20px;
+            }
+
+            .us3 p {
+                font-size: 12px;
+                line-height: 22px;
+            }
+
+            .about {
+                grid-template-rows: auto repeat(5, 100px);
+                grid-gap: 10px 4px;
+            }
+
+            .us2 {
+                grid-column: 1 / 6;
+            }
+
+            .us3 {
+                grid-column: 1 / 6;
+            }
+
+            .us4 {
+                display: none;
+            }
+
+            .us5 {
+                grid-row: 2 / 7;
+            }
+
+            .us6 {
+                display: none
+            }
+
+            .grid-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .art img {
+                height: 250px;
+            }
+
+            .art h2 {
+                font-size: 20px;
+                line-height: 30px;
+            }
+
+            .art p {
+                font-size: 14px;
+            }
+
+            .icon {
+                height: 70px;
+                flex-direction: column;
+                gap: 12px;
+                justify-content: center;
+            }
+
+            .fun {
+                grid-template-rows: repeat(5, 60px);
+            }
+
+            .footer {
+                height: 500px;
+            }
+
+            .footer h2 {
+                font-size: 18px;
+            }
+
+            .foot1 {
+                grid-row: 2 / 6;
+            }
+
+            .foot1 ul li {
+                font-size: 14px;
+            }
+
+            .footer p {
+                font-size: 14px;
+            }
+
+            .foot2 {
+                grid-row: 2 / 5;
+                grid-column: 2 / 3;
+            }
+
+            .foot3 {
+                display: none;
+            }
+
+            .up {
+                font-size: 14px;
+            }
+
+            .grow {
+                gap: 12px;
+            }
+
+            .control {
+                padding: 6px 6px;
+                font-size: 15px;
+            }
+
+            .btn {
+                padding: 10px 10px;
+            }
+
+            .foot3 ul li {
+                line-height: 30px;
+                font-size: 14px;
+            }
+
+            .right i {
+                font-size: 18px;
+            }
+
+            .copy span {
+                font-size: 12px;
+            }
+
+            .fun {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(5, 70px);
+                grid-gap: 0 40px;
+            }
         }
     </style>
 </head>
@@ -821,6 +1467,8 @@
                 <div class="logo">
                     <img src="willbl-site-logo.png">
                 </div>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
                 <div class="nav-links">
                     <ul>
                         <li><a href="#">Home</a></li>
@@ -901,7 +1549,8 @@
                     down to the ground, in collaboration with the Tsavo Trust and Kenya Wildlife Service. In 2019, this
                     culminated in a coffee table book, “Land of Giants”.</p>
 
-                <p>In 2019, I used my Camtraptions system to capture rare high-quality camera trap images of a
+                <p id="remove">In 2019, I used my Camtraptions system to capture rare high-quality camera trap images of
+                    a
                     melanistic leopard in Africa. My new book, “The Black Leopard”, was released in March 2021.</p>
             </div>
         </div>
